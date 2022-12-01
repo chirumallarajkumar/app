@@ -1,8 +1,9 @@
 
-import 'package:arawinzhilo/Screens/SignupScreen/Model/MobileOtpmodel.dart';
 import 'package:arawinzhilo/Screens/SignupScreen/Repository/mobileRepository.dart';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
+
+import '../Model/MobileOtpmodel.dart';
 part 'signupmobile_event.dart';
 part 'signupmobile_state.dart';
 

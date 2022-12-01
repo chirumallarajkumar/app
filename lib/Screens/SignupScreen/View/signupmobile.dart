@@ -10,11 +10,10 @@ import '../../../Widgets/button.dart';
 import '../../../Widgets/textformfield.dart';
 import 'package:arawinzhilo/route.dart' as route;
 
+import '../Repository/registerRepository.dart';
 import '../bloc/signupmobile_bloc.dart';
 
 class Signupmobile extends StatelessWidget {
-  
-
   TextEditingController _emailPhone = new TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -40,7 +39,11 @@ class Signupmobile extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => SignupScreen(state.mobileOtpmodel)),
+                      builder: (context) => RepositoryProvider(
+                            create: (context) => registerRepository(),
+                            child: SignupScreen(
+                                state.mobileOtpmodel, _emailPhone.text),
+                          )),
                 );
               }
             }
@@ -76,73 +79,73 @@ class Signupmobile extends StatelessWidget {
                   ],
                 ),
               );
-            }
-            else {
-            return Center(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    text(
-                      data: "Registration",
-                      style: Text_Style.Heading,
-                    ),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    text(
-                      data: "Enter Your 10 digit Mobile Number",
-                      style: Text_Style.SecondaryNormal,
-                    ),
-                    SizedBox(
-                      height: 25,
-                    ),
-                    textformfield(
-                      obscuretext: false,
-                      maxlength: 10,
-                      textInputType: TextInputType.number,
-                      controller: _emailPhone,
-                      HintText: "phone number",
-                      prefixicon: icons.callicon,
-                      suffixicon: IconButton(
-                        onPressed: () {},
-                        icon: Icon(null),
+            } else {
+              return Center(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      text(
+                        data: "Registration",
+                        style: Text_Style.Heading,
                       ),
-                      radius: 30,
-                    ),
-                    SizedBox(
-                      height: 25,
-                    ),
-                    InkWell(
-                      onTap: (() {
-                        if (_emailPhone.text.length == 10) {
-                             BlocProvider.of<SignupmobileBloc>(context)
+                      SizedBox(
+                        height: 15,
+                      ),
+                      text(
+                        data: "Enter Your 10 digit Mobile Number",
+                        style: Text_Style.SecondaryNormal,
+                      ),
+                      SizedBox(
+                        height: 25,
+                      ),
+                      textformfield(
+                        obscuretext: false,
+                        maxlength: 10,
+                        textInputType: TextInputType.number,
+                        controller: _emailPhone,
+                        HintText: "phone number",
+                        prefixicon: icons.callicon,
+                        suffixicon: IconButton(
+                          onPressed: () {},
+                          icon: Icon(null),
+                        ),
+                        radius: 30,
+                      ),
+                      SizedBox(
+                        height: 25,
+                      ),
+                      InkWell(
+                        onTap: (() {
+                          if (_emailPhone.text.length == 10) {
+                            BlocProvider.of<SignupmobileBloc>(context)
                                 .add(LoadSignupmobileEvent(_emailPhone.text));
-                        } else {
-                          final snackBar = SnackBar(
-                            backgroundColor: color.FormColor,
-                            content: text(
-                                data: "Please enter 10 digit mobile number",
-                                style: Text_Style.Error),
-                          );
-                          ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                        }
-                      }),
-                      child: button(
-                          alignment: Alignment.center,
-                          height: 50,
-                          width: MediaQuery.of(context).size.width * 90,
-                          radius: 18,
-                          ContainerColor: color.Main_Text,
-                          borderColor: color.Main_Text,
-                          buttontext: "Send Otp",
-                          buttontextStyle: Text_Style.Form600),
-                    ),
-                  ],
+                          } else {
+                            final snackBar = SnackBar(
+                              backgroundColor: color.FormColor,
+                              content: text(
+                                  data: "Please enter 10 digit mobile number",
+                                  style: Text_Style.Error),
+                            );
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(snackBar);
+                          }
+                        }),
+                        child: button(
+                            alignment: Alignment.center,
+                            height: 50,
+                            width: MediaQuery.of(context).size.width * 90,
+                            radius: 18,
+                            ContainerColor: color.Main_Text,
+                            borderColor: color.Main_Text,
+                            buttontext: "Send Otp",
+                            buttontextStyle: Text_Style.Form600),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            );
+              );
             }
           },
         ),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:hilo_bloc/Packages/CommonAssets/Colors.dart';
-import 'package:hilo_bloc/Packages/CommonAssets/TextStyle.dart';
+import 'package:arawinzhilo/Packages/CommonAssets/Colors.dart';
+import 'package:arawinzhilo/Packages/CommonAssets/TextStyle.dart';
 
 import '../../../Widgets/Text.dart';
 

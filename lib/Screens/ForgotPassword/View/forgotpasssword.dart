@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hilo_bloc/Packages/CommonAssets/Colors.dart';
-import 'package:hilo_bloc/Screens/ForgotPassword/Model/otpmodel.dart';
-import 'package:hilo_bloc/Screens/ForgotPassword/Repository/otpapi.dart';
-import 'package:hilo_bloc/Screens/ForgotPassword/View/otpscreenfg.dart';
-import 'package:hilo_bloc/Screens/ForgotPassword/bloc/otp_bloc.dart';
-import 'package:hilo_bloc/Utils/icons.dart';
+import 'package:arawinzhilo/Packages/CommonAssets/Colors.dart';
+import 'package:arawinzhilo/Screens/ForgotPassword/Model/otpmodel.dart';
+import 'package:arawinzhilo/Screens/ForgotPassword/Repository/otpapi.dart';
+import 'package:arawinzhilo/Screens/ForgotPassword/View/otpscreenfg.dart';
+import 'package:arawinzhilo/Screens/ForgotPassword/bloc/otp_bloc.dart';
+import 'package:arawinzhilo/Utils/icons.dart';
 import '../../../Packages/CommonAssets/TextStyle.dart';
 import '../../../Widgets/Text.dart';
 import '../../../Widgets/button.dart';
 import '../../../Widgets/textformfield.dart';
-import 'package:hilo_bloc/route.dart' as route;
+import 'package:arawinzhilo/route.dart' as route;
 
 class forgotpassword extends StatelessWidget {
   TextEditingController _emailPhone = new TextEditingController();

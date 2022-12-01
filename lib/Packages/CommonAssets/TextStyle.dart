@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:hilo_bloc/Packages/CommonAssets/Colors.dart';
+import 'package:arawinzhilo/Packages/CommonAssets/Colors.dart';
 
 class Text_Style {
   static final Heading = TextStyle(

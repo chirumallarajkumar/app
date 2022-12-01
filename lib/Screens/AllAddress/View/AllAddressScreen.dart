@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hilo_bloc/Packages/CommonAssets/Colors.dart';
-import 'package:hilo_bloc/Packages/CommonAssets/TextStyle.dart';
-import 'package:hilo_bloc/Screens/AllAddress/bloc/all_address_bloc.dart';
-import 'package:hilo_bloc/Screens/EditAddress/view/editAddress.dart';
-import 'package:hilo_bloc/Widgets/Text.dart';
+import 'package:arawinzhilo/Packages/CommonAssets/Colors.dart';
+import 'package:arawinzhilo/Packages/CommonAssets/TextStyle.dart';
+import 'package:arawinzhilo/Screens/AllAddress/bloc/all_address_bloc.dart';
+import 'package:arawinzhilo/Screens/EditAddress/view/editAddress.dart';
+import 'package:arawinzhilo/Widgets/Text.dart';
 
 import '../Model/allAddressModel.dart';
 

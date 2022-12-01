@@ -1,15 +1,21 @@
+import 'package:arawinzhilo/Screens/SignupScreen/Model/MobileOtpmodel.dart';
+import 'package:arawinzhilo/Screens/SignupScreen/View/signupmobile.dart';
 import 'package:flutter/material.dart';
-import 'package:hilo_bloc/Utils/icons.dart';
-import "package:hilo_bloc/route.dart" as route;
+import 'package:arawinzhilo/Utils/icons.dart';
+import "package:arawinzhilo/route.dart" as route;
 
-import 'package:hilo_bloc/Packages/CommonAssets/Colors.dart';
+import 'package:arawinzhilo/Packages/CommonAssets/Colors.dart';
 
 import '../../../Packages/CommonAssets/TextStyle.dart';
 import '../../../Widgets/Text.dart';
 import '../../../Widgets/button.dart';
 import '../../../Widgets/textformfield.dart';
 
-class SigniupScreen extends StatelessWidget {
+class SignupScreen extends StatelessWidget {
+SignupScreen(this.mobileOtpmodel);
+MobileOtpmodel mobileOtpmodel;
+
+
   TextEditingController _emailPhone = new TextEditingController();
   TextEditingController _password = new TextEditingController();
   TextEditingController _name = new TextEditingController();
@@ -37,6 +43,22 @@ class SigniupScreen extends StatelessWidget {
                 text(
                   data: "Please enter your details here",
                   style: Text_Style.SecondaryNormal,
+                ),
+                 SizedBox(
+                  height: 20,
+                ),
+                  textformfield(
+                  obscuretext: false,
+                  maxlength: 6,
+                  textInputType: TextInputType.name,
+                  controller: _name,
+                  HintText: mobileOtpmodel.otp,
+                  prefixicon: icons.pinicon,
+                  suffixicon: IconButton(
+                    onPressed: () {},
+                    icon: Icon(null),
+                  ),
+                  radius: 30,
                 ),
                 SizedBox(
                   height: 20,

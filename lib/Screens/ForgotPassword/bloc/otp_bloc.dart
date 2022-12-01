@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:hilo_bloc/Screens/ForgotPassword/Model/otpmodel.dart';
-import 'package:hilo_bloc/Screens/ForgotPassword/Repository/otpapi.dart';
+import 'package:arawinzhilo/Screens/ForgotPassword/Model/otpmodel.dart';
+import 'package:arawinzhilo/Screens/ForgotPassword/Repository/otpapi.dart';
 
 part 'otp_event.dart';
 part 'otp_state.dart';

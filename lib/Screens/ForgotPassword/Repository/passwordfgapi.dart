@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:hilo_bloc/Screens/ForgotPassword/Model/passwordfgmodel.dart';
+import 'package:arawinzhilo/Screens/ForgotPassword/Model/passwordfgmodel.dart';
 import 'package:http/http.dart';
 
 import 'package:http/http.dart' as http;

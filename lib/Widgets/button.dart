@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../Packages/CommonAssets/TextStyle.dart';
 import 'Text.dart';
-import 'package:hilo_bloc/Packages/CommonAssets/Colors.dart';
+import 'package:arawinzhilo/Packages/CommonAssets/Colors.dart';
 
 class button extends StatelessWidget {
   final Alignment alignment;

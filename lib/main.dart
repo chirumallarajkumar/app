@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import "package:hilo_bloc/route.dart" as route;
+import "package:arawinzhilo/route.dart" as route;
 
 void main() {
   runApp(const MyApp());

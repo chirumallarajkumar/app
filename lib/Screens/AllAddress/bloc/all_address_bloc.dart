@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:hilo_bloc/Screens/AllAddress/Model/allAddressModel.dart';
-import 'package:hilo_bloc/Screens/AllAddress/Repository/alladdressesapi.dart';
+import 'package:arawinzhilo/Screens/AllAddress/Model/allAddressModel.dart';
+import 'package:arawinzhilo/Screens/AllAddress/Repository/alladdressesapi.dart';
 import 'package:meta/meta.dart';
 
 import 'package:equatable/equatable.dart';

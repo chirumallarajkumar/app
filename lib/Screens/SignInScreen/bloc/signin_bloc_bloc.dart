@@ -1,9 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:hilo_bloc/Screens/AllAddress/Model/allAddressModel.dart';
-import 'package:hilo_bloc/Screens/SignInScreen/Model/signinmodel.dart';
-import 'package:hilo_bloc/Screens/SignInScreen/Model/signinmodel.dart';
-import 'package:hilo_bloc/Screens/SignInScreen/Repository/signinvalidation.dart';
+import 'package:arawinzhilo/Screens/AllAddress/Model/allAddressModel.dart';
+import 'package:arawinzhilo/Screens/SignInScreen/Model/signinmodel.dart';
+import 'package:arawinzhilo/Screens/SignInScreen/Model/signinmodel.dart';
+import 'package:arawinzhilo/Screens/SignInScreen/Repository/signinvalidation.dart';
 
 part 'signin_bloc_event.dart';
 part 'signin_bloc_state.dart';

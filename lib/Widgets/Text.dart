@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:hilo_bloc/Packages/CommonAssets/TextStyle.dart';
+import 'package:arawinzhilo/Packages/CommonAssets/TextStyle.dart';
 
 class text extends StatelessWidget {
   final String data;

@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hilo_bloc/Packages/CommonAssets/Colors.dart';
-import 'package:hilo_bloc/Packages/CommonAssets/TextStyle.dart';
-import 'package:hilo_bloc/Screens/AllAddress/View/AllAddressScreen.dart';
-import 'package:hilo_bloc/Screens/SignInScreen/bloc/signin_bloc_bloc.dart';
-import 'package:hilo_bloc/Utils/icons.dart';
-import 'package:hilo_bloc/Widgets/Text.dart';
-import 'package:hilo_bloc/Widgets/button.dart';
-import 'package:hilo_bloc/Widgets/textformfield.dart';
-import "package:hilo_bloc/route.dart" as route;
+import 'package:arawinzhilo/Packages/CommonAssets/Colors.dart';
+import 'package:arawinzhilo/Packages/CommonAssets/TextStyle.dart';
+import 'package:arawinzhilo/Screens/SignInScreen/bloc/signin_bloc_bloc.dart';
+import 'package:arawinzhilo/Utils/icons.dart';
+import 'package:arawinzhilo/Widgets/Text.dart';
+import 'package:arawinzhilo/Widgets/button.dart';
+import 'package:arawinzhilo/Widgets/textformfield.dart';
+import "package:arawinzhilo/route.dart" as route;
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Signinpage extends StatefulWidget {
@@ -211,7 +210,7 @@ class _SigninpageState extends State<Signinpage> {
                                   style: Text_Style.Headingnormal),
                               InkWell(
                                 onTap: (() {
-                                  Navigator.pushNamed(context, route.Signup);
+                                  Navigator.pushNamed(context, route.Signupmbl);
                                 }),
                                 child: text(
                                     data: " Sign Up",

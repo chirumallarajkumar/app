@@ -22,7 +22,7 @@ rule CUSTOM_COMMAND
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__hilo_bloc
+rule CXX_COMPILER__arawinzhilo
   depfile = $DEP_FILE
   deps = gcc
   command = /snap/flutter/current/usr/bin/clang++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -32,7 +32,7 @@ rule CXX_COMPILER__hilo_bloc
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__hilo_bloc
+rule CXX_EXECUTABLE_LINKER__arawinzhilo
   command = $PRE_LINK && /snap/flutter/current/usr/bin/clang++  $FLAGS  $LINK_FLAGS $in  -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -42,7 +42,7 @@ rule CXX_EXECUTABLE_LINKER__hilo_bloc
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /snap/flutter/130/usr/bin/cmake -S/home/arawinz-05/Desktop/hilo/hilo_bloc/linux -B/home/arawinz-05/Desktop/hilo/hilo_bloc/build/linux/x64/debug
+  command = /snap/flutter/130/usr/bin/cmake -S/home/arawinz-05/Desktop/hilo/arawinzhilo/linux -B/home/arawinz-05/Desktop/hilo/arawinzhilo/build/linux/x64/debug
   description = Re-running CMake...
   generator = 1
 

@@ -2,19 +2,20 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hilo_bloc/Screens/AddingAddress/view/AddAddress.dart';
-import 'package:hilo_bloc/Screens/AllAddress/Repository/alladdressesapi.dart';
-import 'package:hilo_bloc/Screens/AllAddress/View/AllAddressScreen.dart';
-import 'package:hilo_bloc/Screens/ForgotPassword/View/forgotpasssword.dart';
-import 'package:hilo_bloc/Screens/ForgotPassword/View/otpscreenfg.dart';
-import 'package:hilo_bloc/Screens/ForgotPassword/View/resetpassword.dart';
-import 'package:hilo_bloc/Screens/SignInScreen/View/Signinpage.dart';
-import 'package:hilo_bloc/Screens/SignupScreen/View/SIgnupScreen.dart';
-import 'package:hilo_bloc/Screens/SplashScreen/View/SplashPage.dart';
+import 'package:arawinzhilo/Screens/AddingAddress/view/AddAddress.dart';
+import 'package:arawinzhilo/Screens/AllAddress/Repository/alladdressesapi.dart';
+import 'package:arawinzhilo/Screens/AllAddress/View/AllAddressScreen.dart';
+import 'package:arawinzhilo/Screens/ForgotPassword/View/forgotpasssword.dart';
+import 'package:arawinzhilo/Screens/ForgotPassword/View/otpscreenfg.dart';
+import 'package:arawinzhilo/Screens/ForgotPassword/View/resetpassword.dart';
+import 'package:arawinzhilo/Screens/SignInScreen/View/Signinpage.dart';
+import 'package:arawinzhilo/Screens/SignupScreen/View/SIgnupScreen.dart';
+import 'package:arawinzhilo/Screens/SplashScreen/View/SplashPage.dart';
 
 import 'Screens/ForgotPassword/Repository/otpapi.dart';
 import 'Screens/SignInScreen/Repository/signinvalidation.dart';
-
+import 'Screens/SignupScreen/Repository/mobileRepository.dart';
+import 'Screens/SignupScreen/View/signupmobile.dart';
 
 const String signinpage = 'signin';
 const String splashscreen = 'SplashScreen';
@@ -25,6 +26,7 @@ const String forgotpassw = "forgotpasssword";
 const String otpscreenforgot = "otpscreenforgot";
 const String resetpass = "resetpass";
 const String Signup = "Signup";
+const String Signupmbl = "Signupmobile";
 
 MaterialPageRoute controller(RouteSettings settings) {
   switch (settings.name) {
@@ -56,8 +58,17 @@ MaterialPageRoute controller(RouteSettings settings) {
     //   return MaterialPageRoute(builder: (context) => otpscreenfg());
     // case resetpass:
     //   return MaterialPageRoute(builder: (context) => resetpassword());
-    case Signup:
-      return MaterialPageRoute(builder: (context) => SigniupScreen());
+    // case Signup:
+    //   return MaterialPageRoute(builder: (context) => SigniupScreen());
+    case Signupmbl:
+    
+      return MaterialPageRoute(
+        
+          builder: (context) => RepositoryProvider(
+                create: (context) => mobileRepository(),
+                child: Signupmobile(),
+              ));
+
     default:
       throw ('the route page does not exist');
   }

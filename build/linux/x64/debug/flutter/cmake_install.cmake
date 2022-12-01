@@ -1,8 +1,8 @@
-# Install script for directory: /home/arawinz-05/Desktop/hilo/hilo_bloc/linux/flutter
+# Install script for directory: /home/arawinz-05/Desktop/hilo/arawinzhilo/linux/flutter
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/arawinz-05/Desktop/hilo/hilo_bloc/build/linux/x64/debug/bundle")
+  set(CMAKE_INSTALL_PREFIX "/home/arawinz-05/Desktop/hilo/arawinzhilo/build/linux/x64/debug/bundle")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

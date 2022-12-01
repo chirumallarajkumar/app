@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:hilo_bloc/Screens/ForgotPassword/Model/otpmodel.dart';
-import 'package:hilo_bloc/Screens/ForgotPassword/Model/passwordfgmodel.dart';
+import 'package:arawinzhilo/Screens/ForgotPassword/Model/otpmodel.dart';
+import 'package:arawinzhilo/Screens/ForgotPassword/Model/passwordfgmodel.dart';
 import '../../Repository/passwordfgapi.dart';
 part 'fgpassword_event.dart';
 part 'fgpassword_state.dart';

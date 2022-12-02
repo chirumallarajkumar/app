@@ -36,6 +36,8 @@ class _SigninpageState extends State<Signinpage> {
                   content: text(data: state.error, style: Text_Style.Error),
                 );
                 ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                BlocProvider.of<SigninBlocBloc>(context)
+                    .add(ErrorSigninBlocEvent());
               }
               if (state is SigninBlocLoadedState) {
                 print("object");
@@ -63,11 +65,12 @@ class _SigninpageState extends State<Signinpage> {
             },
             builder: (context, state) {
               if (state is SigninBlocLoadingState) {
-               
-               return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  const CircularProgressIndicator(),
-                  Text("Loading....")
-                ]);
+                return Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const CircularProgressIndicator(),
+                      Text("Loading....")
+                    ]);
               }
               if (state is SigninBlocIntialState) {
                 return SingleChildScrollView(
@@ -225,7 +228,9 @@ class _SigninpageState extends State<Signinpage> {
                 );
               }
               if (state is SigninBlocErrorState) {
-                return text(data: state.error, style: Text_Style.Error);
+                return Center(
+                    child: text(
+                        data: "Invalid Cridentials", style: Text_Style.Error));
               } else {
                 return SizedBox();
               }

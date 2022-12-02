@@ -187,15 +187,7 @@ class _EditAddressState extends State<EditAddress> {
               InkWell(
                 onTap: () {
                   print(addressline1.text);
-                  addAddress(
-                      label.toString(),
-                      addressline1.text,
-                      addressline2.text,
-                      City.text,
-                      State.text,
-                      mobilenumber.text,
-                      "1",
-                      Pincode.text);
+                
                   // Navigator.pushNamed(context, route.AddNewAddress);
                 },
                 child: button(

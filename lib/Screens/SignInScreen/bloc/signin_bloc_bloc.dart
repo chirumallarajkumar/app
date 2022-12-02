@@ -21,5 +21,7 @@ class SigninBlocBloc extends Bloc<SigninBlocEvent, SigninBlocState> {
         emit(SigninBlocErrorState(e.toString()));
       }
     });
+
+    on<ErrorSigninBlocEvent>((event, emit) => emit(SigninBlocIntialState()));
   }
 }

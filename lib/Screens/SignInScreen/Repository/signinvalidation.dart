@@ -1,14 +1,7 @@
 import 'dart:convert';
-
-import 'package:flutter/widgets.dart';
-import 'package:arawinzhilo/Screens/AllAddress/Model/allAddressModel.dart';
 import 'package:arawinzhilo/Screens/SignInScreen/Model/signinmodel.dart';
-import "package:arawinzhilo/route.dart" as route;
 import 'package:http/http.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-
-import 'package:http/http.dart' as http;
-
+// ignore: camel_case_types
 class signinRepository {
   Future<Signinmodel> signinValidation(String mobile,String password) async {
     

@@ -12,6 +12,7 @@ import 'package:arawinzhilo/Screens/SignInScreen/View/Signinpage.dart';
 import 'package:arawinzhilo/Screens/SignupScreen/View/SIgnupScreen.dart';
 import 'package:arawinzhilo/Screens/SplashScreen/View/SplashPage.dart';
 
+import 'Screens/AddingAddress/repository/addaddressapi.dart';
 import 'Screens/ForgotPassword/Repository/otpapi.dart';
 import 'Screens/SignInScreen/Repository/signinvalidation.dart';
 import 'Screens/SignupScreen/Repository/mobileRepository.dart';
@@ -39,7 +40,11 @@ MaterialPageRoute controller(RouteSettings settings) {
                 child: Signinpage(),
               ));
     case AddNewAddress:
-      return MaterialPageRoute(builder: (context) => AddAddress());
+      return MaterialPageRoute(
+          builder: (context) => RepositoryProvider(
+                create: (context) => addAddressRepository(),
+                child: AddAddress(),
+              ));
     //  case Editaddress:
     //   return MaterialPageRoute(builder: (context) => EditAddress(addId: , userids: userids, addLabel: addLabel, addLine1: addLine1, addLine2: addLine2, city: city, state: state, pincode: pincode, contactNo: contactNo, addStatus: addStatus)));
     case AllAddress:
@@ -61,9 +66,7 @@ MaterialPageRoute controller(RouteSettings settings) {
     // case Signup:
     //   return MaterialPageRoute(builder: (context) => SigniupScreen());
     case Signupmbl:
-    
       return MaterialPageRoute(
-        
           builder: (context) => RepositoryProvider(
                 create: (context) => mobileRepository(),
                 child: Signupmobile(),

@@ -16,7 +16,7 @@ class fgpasswordRepository {
       'uid': '${otpmodel.userId}',
       'otp': '${otpmodel.otp}',
       'otp_token': '${otpmodel.otpToken}',
-      'newpass': '${newpass}'
+      'newpass': '${newpass.toString()}'
     };
     // String jsonBody = json.encode(body);
     final encoding = Encoding.getByName('utf-8');

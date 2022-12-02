@@ -11,3 +11,7 @@ LoadSigninBlocEvent(this.mobile,this.password);
    @override
   List<Object?> get props => [];
 }
+class ErrorSigninBlocEvent extends SigninBlocEvent{
+   @override
+  List<Object?> get props => [];
+}

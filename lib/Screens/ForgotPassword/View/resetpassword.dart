@@ -110,7 +110,7 @@ class resetpassword extends StatelessWidget {
                           if (_Password.text.length >= 10) {
                             BlocProvider.of<FgpasswordBloc>(context).add(
                                 LoadFgpasswordEvent(
-                                    _Password.toString(), otpmodel));
+                                    _Password.text, otpmodel));
                           } else {
                             final snackBar = SnackBar(
                               backgroundColor: color.FormColor,

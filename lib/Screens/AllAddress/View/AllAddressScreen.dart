@@ -9,7 +9,6 @@ import 'package:arawinzhilo/Screens/EditAddress/view/editAddress.dart';
 import 'package:arawinzhilo/Widgets/Text.dart';
 import 'package:arawinzhilo/route.dart' as route;
 import '../Model/allAddressModel.dart';
-
 class AllAddressScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

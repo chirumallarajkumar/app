@@ -19,7 +19,7 @@ import 'Screens/SignupScreen/Repository/mobileRepository.dart';
 import 'Screens/SignupScreen/View/signupmobile.dart';
 
 const String signinpage = 'signin';
-const String splashscreen = 'SplashScreen';
+const String splash = 'SplashScreen';
 const String AddNewAddress = "AddAddress";
 const String AllAddress = "AllAddress";
 const String Editaddress = "EditAddress";
@@ -31,8 +31,8 @@ const String Signupmbl = "Signupmobile";
 
 MaterialPageRoute controller(RouteSettings settings) {
   switch (settings.name) {
-    case splashscreen:
-      return MaterialPageRoute(builder: (context) => SplashPage());
+    case splash:
+      return MaterialPageRoute(builder: (context) => splashscreen());
     case signinpage:
       return MaterialPageRoute(
           builder: (context) => RepositoryProvider(

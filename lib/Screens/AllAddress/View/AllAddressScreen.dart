@@ -8,6 +8,7 @@ import 'package:arawinzhilo/Screens/AllAddress/bloc/all_address_bloc.dart';
 import 'package:arawinzhilo/Screens/EditAddress/view/editAddress.dart';
 import 'package:arawinzhilo/Widgets/Text.dart';
 import 'package:arawinzhilo/route.dart' as route;
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../EditAddress/Repository/editAddressapi.dart';
 import '../Model/allAddressModel.dart';
 
@@ -41,6 +42,20 @@ class AllAddressScreen extends StatelessWidget {
             if (state is AllAddressLoadedState) {
               List<alladdressmodel> addressList = state.address;
               return Scaffold(
+                appBar: AppBar(
+                    backgroundColor: color.primary,
+                    title: Text("All Addresses"),
+                    actions: [
+                      IconButton(
+                          onPressed: () async {
+                            final prefs = await SharedPreferences.getInstance();
+                            final success = await prefs.remove('tkn');
+                            print(success);
+                            Navigator.of(context).pushNamedAndRemoveUntil(
+                                route.splash, (Route<dynamic> route) => false);
+                          },
+                          icon: Icon(Icons.logout))
+                    ]),
                 body: ListView.builder(
                     itemCount: addressList.length,
                     itemBuilder: (_, index) {

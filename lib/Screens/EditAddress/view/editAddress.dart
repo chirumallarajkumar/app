@@ -78,7 +78,7 @@ class _EditAddressState extends State<EditAddress> {
         label = _chipsList[selectedIndex].label;
         }
          if(widget.addLabel=='Other'){
-           selectedIndex = 1;
+           selectedIndex = 2;
         label = _chipsList[selectedIndex].label;
         }
        

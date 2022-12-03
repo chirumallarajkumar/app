@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
         onGenerateRoute: route.controller,
-      initialRoute: route.signinpage,
+      initialRoute: route.splash,
     );
   }
 }

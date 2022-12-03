@@ -8,7 +8,9 @@ import 'package:arawinzhilo/Screens/AllAddress/bloc/all_address_bloc.dart';
 import 'package:arawinzhilo/Screens/EditAddress/view/editAddress.dart';
 import 'package:arawinzhilo/Widgets/Text.dart';
 import 'package:arawinzhilo/route.dart' as route;
+import '../../EditAddress/Repository/editAddressapi.dart';
 import '../Model/allAddressModel.dart';
+
 class AllAddressScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -51,19 +53,28 @@ class AllAddressScreen extends StatelessWidget {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => EditAddress(
-                                          addId: addressList[index].addId,
-                                          userids: addressList[index].userids,
-                                          addLabel: addressList[index].addLabel,
-                                          addLine1: addressList[index].addLine1,
-                                          addLine2: addressList[index].addLine2,
-                                          city: addressList[index].city,
-                                          state: addressList[index].state,
-                                          pincode: addressList[index].pincode,
-                                          contactNo:
-                                              addressList[index].contactNo,
-                                          addStatus:
-                                              addressList[index].addStatus)),
+                                      builder: (context) => RepositoryProvider(
+                                            create: (context) =>
+                                                editAddressRepository(),
+                                            child: EditAddress(
+                                                addId: addressList[index].addId,
+                                                userids:
+                                                    addressList[index].userids,
+                                                addLabel:
+                                                    addressList[index].addLabel,
+                                                addLine1:
+                                                    addressList[index].addLine1,
+                                                addLine2:
+                                                    addressList[index].addLine2,
+                                                city: addressList[index].city,
+                                                state: addressList[index].state,
+                                                pincode:
+                                                    addressList[index].pincode,
+                                                contactNo: addressList[index]
+                                                    .contactNo,
+                                                addStatus: addressList[index]
+                                                    .addStatus),
+                                          )),
                                 );
                               }),
                               tileColor: Colors.transparent,

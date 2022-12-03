@@ -53,6 +53,7 @@ class AllAddressScreen extends StatelessWidget {
                             print(success);
                             Navigator.of(context).pushNamedAndRemoveUntil(
                                 route.splash, (Route<dynamic> route) => false);
+                                print("hek");
                           },
                           icon: Icon(Icons.logout))
                     ]),
